@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Elements, PaymentElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { getStripe } from "@/lib/stripe";
 
-function CheckoutForm({ amount }: { amount: number }) {
+function CheckoutForm({ amount, onSuccess }: { amount: number, onSuccess: () => void }) {
     const stripe = useStripe();
     const elements = useElements();
     const [message, setMessage] = useState<string | null>(null);
@@ -19,18 +19,24 @@ function CheckoutForm({ amount }: { amount: number }) {
 
         setIsLoading(true);
 
-        const { error } = await stripe.confirmPayment({
+        const { error, paymentIntent } = await stripe.confirmPayment({
             elements,
+            redirect: 'if_required',
             confirmParams: {
-                // Make sure to change this to your payment completion page
+                // Fallback URL if redirect is forced (e.g. 3DSecure)
                 return_url: `${window.location.origin}/checkout/success`,
             },
         });
 
-        if (error.type === "card_error" || error.type === "validation_error") {
-            setMessage(error.message ?? "An unexpected error occurred.");
-        } else {
-            setMessage("An unexpected error occurred.");
+        if (error) {
+            if (error.type === "card_error" || error.type === "validation_error") {
+                setMessage(error.message ?? "An unexpected error occurred.");
+            } else {
+                setMessage("An unexpected error occurred.");
+            }
+        } else if (paymentIntent && paymentIntent.status === "succeeded") {
+            // Payment successful without redirect
+            onSuccess();
         }
 
         setIsLoading(false);
@@ -53,7 +59,7 @@ function CheckoutForm({ amount }: { amount: number }) {
     );
 }
 
-export default function StripePaymentWrapper({ amount }: { amount: number }) {
+export default function StripePaymentWrapper({ amount, onSuccess }: { amount: number, onSuccess: () => void }) {
     const [clientSecret, setClientSecret] = useState("");
 
     useEffect(() => {
@@ -81,7 +87,7 @@ export default function StripePaymentWrapper({ amount }: { amount: number }) {
         <div className="w-full">
             {clientSecret ? (
                 <Elements options={options} stripe={getStripe()}>
-                    <CheckoutForm amount={amount} />
+                    <CheckoutForm amount={amount} onSuccess={onSuccess} />
                 </Elements>
             ) : (
                 <div className="flex justify-center p-4">
