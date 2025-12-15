@@ -56,7 +56,7 @@ export const PRODUCTS: Product[] = [
         tagline: "Tart hibiscus for a vibrant, cool cup.",
         description: "Our Hibiscus Chill is made from premium hibiscus calyces delivering a refreshing, tangy cup. Serve iced for a natural, colorful refresher or hot with a hint of honey.",
         price: 550,
-        image_url: "https://images.unsplash.com/photo-1563911892437-1feda9d5c2c5?auto=format&fit=crop&q=80&w=800",
+        image_url: "/hibiscus-chill.jpg",
         category: "Herbal",
         stock: 50,
         sku: "SL-004",
