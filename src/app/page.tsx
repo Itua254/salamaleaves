@@ -30,6 +30,8 @@ export default async function Home() {
             <p className="text-xl text-foreground/80 mb-8 leading-relaxed max-w-xl">
               Discover our collection of premium organic teas, ethically sourced and crafted for your wellness.
               Taste the difference of true quality.
+              <br />
+              <span className="block mt-4 font-serif italic font-bold text-primary">— (MR TEE)</span>
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/shop" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full font-bold hover:bg-primary/90 transition-transform hover:scale-105">
