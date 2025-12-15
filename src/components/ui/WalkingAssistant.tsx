@@ -12,6 +12,9 @@ const STOP_DURATION = 3500;    // 3.5 seconds stopped
 export function WalkingAssistant() {
     const [animationData, setAnimationData] = useState<any>(null);
     const [direction, setDirection] = useState(1); // 1 = right, -1 = left
+    const [isWalking, setIsWalking] = useState(true);
+    const [showSpeech, setShowSpeech] = useState(false);
+    const [position, setPosition] = useState(-100);
     const SPEED = 2; // pixels per frame
 
     const lottieRef = useRef<LottieRefCurrentProps>(null);
