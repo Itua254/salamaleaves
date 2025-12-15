@@ -6,3 +6,7 @@ WHERE slug = 'energy-ginger-green';
 UPDATE products
 SET image_url = '/hibiscus-chill.jpg'
 WHERE slug = 'hibiscus-chill';
+-- Update Image for Immunity Turmeric & Lemon
+UPDATE products
+SET image_url = '/immunity-turmeric-lemon.jpg'
+WHERE slug = 'immunity-turmeric-lemon';

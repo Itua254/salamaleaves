@@ -72,7 +72,7 @@ export const PRODUCTS: Product[] = [
         tagline: "Turmeric root and bright lemon for everyday support.",
         description: "Immunity Turmeric & Lemon combines ground turmeric with pepper and zesty lemon peel for a warming, comforting tea. Black pepper enhances turmeric’s natural compounds for a fuller flavor.",
         price: 950,
-        image_url: "https://images.unsplash.com/photo-1615485925763-867862f850a0?auto=format&fit=crop&q=80&w=800",
+        image_url: "/immunity-turmeric-lemon.jpg",
         category: "Herbal",
         stock: 50,
         sku: "SL-005",
