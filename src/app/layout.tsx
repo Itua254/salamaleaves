@@ -1,5 +1,4 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
+import { WalkingAssistant } from "@/components/ui/WalkingAssistant";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -47,9 +46,9 @@ export default function RootLayout({
           <WhatsAppButton />
           <Footer />
         </CartProvider>
+        <WalkingAssistant />
       </body>
     </html>
   );
-}
 
 
