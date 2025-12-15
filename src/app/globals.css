@@ -56,3 +56,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+@keyframes ping-pong {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.animate-ping-pong {
+  animation: ping-pong 2s ease-in-out infinite;
+}
