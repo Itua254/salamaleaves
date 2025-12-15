@@ -3,6 +3,7 @@ import { ProductCarousel } from "@/components/ui/ProductCarousel";
 import { ArrowRight, Leaf, ShieldCheck, Truck } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { Product } from "@/types";
+import { NewsletterForm } from "@/components/ui/NewsletterForm";
 
 export default async function Home() {
   const supabase = await createClient();
@@ -105,16 +106,7 @@ export default async function Home() {
           <p className="text-primary-foreground/80 mb-8 max-w-xl mx-auto">
             Subscribe to our newsletter for exclusive offers, tea brewing tips, and new arrival announcements.
           </p>
-          <div className="max-w-md mx-auto flex gap-2">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-full text-foreground focus:outline-none focus:ring-2 focus:ring-secondary"
-            />
-            <button className="bg-secondary text-secondary-foreground px-6 py-3 rounded-full font-bold hover:bg-secondary/90 transition-colors">
-              Subscribe
-            </button>
-          </div>
+          <NewsletterForm />
         </div>
       </section>
     </div>
