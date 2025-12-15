@@ -14,3 +14,7 @@ WHERE slug = 'immunity-turmeric-lemon';
 UPDATE products
 SET image_url = '/masala-chai.jpg'
 WHERE slug = 'masala-chai';
+-- Update Image for Organic Earl Grey
+UPDATE products
+SET image_url = '/organic-earl-grey.jpg'
+WHERE slug = 'organic-earl-grey';

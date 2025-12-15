@@ -152,7 +152,7 @@ export const PRODUCTS: Product[] = [
         tagline: "Classic Earl Grey with bergamot uplift.",
         description: "Our Organic Earl Grey is crafted from a single-origin black tea base scented with high-quality bergamot for the classic floral-citrus aroma. Smooth, bright, and elegant.",
         price: 800,
-        image_url: "https://images.unsplash.com/photo-1563822249510-17288da76c8c?auto=format&fit=crop&q=80&w=800",
+        image_url: "/organic-earl-grey.jpg",
         category: "Black Tea",
         stock: 50,
         sku: "SL-010",
