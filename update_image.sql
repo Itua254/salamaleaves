@@ -10,3 +10,7 @@ WHERE slug = 'hibiscus-chill';
 UPDATE products
 SET image_url = '/immunity-turmeric-lemon.jpg'
 WHERE slug = 'immunity-turmeric-lemon';
+-- Update Image for Masala Chai
+UPDATE products
+SET image_url = '/masala-chai.jpg'
+WHERE slug = 'masala-chai';

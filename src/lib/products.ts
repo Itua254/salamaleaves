@@ -136,7 +136,7 @@ export const PRODUCTS: Product[] = [
         tagline: "Robust black tea with warming spices.",
         description: "Salam Tea Leaves’ Masala Chai is a bold blend designed to be brewed strong and enjoyed with milk and sweetener. Our black tea base is balanced with warming spices like cardamom, cinnamon, and ginger.",
         price: 350,
-        image_url: "https://images.unsplash.com/photo-1564890369478-c5af469fb013?auto=format&fit=crop&q=80&w=800",
+        image_url: "/masala-chai.jpg",
         category: "Black Tea",
         stock: 50,
         sku: "SL-009",
