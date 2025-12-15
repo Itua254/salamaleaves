@@ -27,9 +27,13 @@ export default function AboutPage() {
                 {/* Story */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
                     <div className="bg-muted aspect-video rounded-2xl overflow-hidden relative">
-                        {/* Placeholder for an image of Turkana/Tea fields */}
-                        <div className="absolute inset-0 flex items-center justify-center bg-primary/10">
-                            <span className="text-primary font-serif italic text-xl">The Hills of Turkana</span>
+                        <img
+                            src="/turkana-hills.jpg"
+                            alt="The Hills of Turkana"
+                            className="w-full h-full object-cover"
+                        />
+                        <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
+                            <span className="text-white font-serif italic text-xl">The Hills of Turkana</span>
                         </div>
                     </div>
                     <div>
