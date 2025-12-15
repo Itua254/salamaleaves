@@ -14,19 +14,22 @@ export default function ContactPage() {
 
     return (
         <div className="bg-background min-h-screen">
-            <div className="bg-primary text-primary-foreground py-20">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h1 className="text-4xl md:text-5xl font-bold font-serif mb-6">Get in Touch</h1>
-                    <p className="text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-10">
+            <div className="relative py-24 lg:py-32 overflow-hidden">
+                {/* Background Image */}
+                <div className="absolute inset-0 z-0">
+                    <img
+                        src="/contact-hero.jpg"
+                        alt="Tea Preparation Background"
+                        className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/50 z-10" />
+                </div>
+
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20">
+                    <h1 className="text-4xl md:text-5xl font-bold font-serif mb-6 text-white">Get in Touch</h1>
+                    <p className="text-xl text-white/90 max-w-2xl mx-auto font-medium">
                         We'd love to hear from you. Reach out for orders, partnerships, or just to say hello.
                     </p>
-                    <div className="flex justify-center">
-                        <img
-                            src="/contact-hero.jpg"
-                            alt="Tea Preparation"
-                            className="rounded-xl shadow-2xl max-h-[500px] border-4 border-white/20"
-                        />
-                    </div>
                 </div>
             </div>
 
