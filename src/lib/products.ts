@@ -40,7 +40,7 @@ export const PRODUCTS: Product[] = [
         tagline: "Energizing green tea with ginger kick.",
         description: "Energy Ginger Green combines high-quality green tea leaves with sun-dried ginger and bright lemon peel. The result is a bright, slightly spicy cup with natural antioxidants and a refreshing finish.",
         price: 600,
-        image_url: "https://images.unsplash.com/photo-1594631252845-a28d5789f251?auto=format&fit=crop&q=80&w=800",
+        image_url: "/ginger-green-tea.jpg",
         category: "Green Tea",
         stock: 50,
         sku: "SL-003",
